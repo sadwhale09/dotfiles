@@ -17,7 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="bira"
+ZSH_THEME="thinkpad"
 # ZSH_THEME="mira"
 # ZSH_THEME=powerlevel10k/powerlevel10k
 
@@ -128,3 +128,27 @@ alias vim="nvim"
 
 # Default to opening files
 alias o="xdg-open"
+
+
+
+
+## Color man page
+# export LESS_TERMCAP_mb=$'\e[1;32m'
+# export LESS_TERMCAP_md=$'\e[1;32m'
+# export LESS_TERMCAP_me=$'\e[0m'
+# export LESS_TERMCAP_se=$'\e[0m'
+# export LESS_TERMCAP_so=$'\e[1;33m'
+# export LESS_TERMCAP_ue=$'\e[0m'
+# export LESS_TERMCAP_us=$'\e[1;4;31m'
+man() {
+        LESS_TERMCAP_mb=$'\e[01;31m'
+        LESS_TERMCAP_md=$'\e[01;31m' \
+        LESS_TERMCAP_me=$'\e[0m' \
+        LESS_TERMCAP_se=$'\e[0m' \
+        LESS_TERMCAP_so=$'\e[45;93m' \
+        LESS_TERMCAP_ue=$'\e[0m' \
+        LESS_TERMCAP_us=$'\e[4;93m' \
+    
+        command man "$@"
+}
+# export PAGER="most"
