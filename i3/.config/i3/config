@@ -30,8 +30,10 @@ set $right semicolon
 
 ################# Single and Dual screen
 
-# current displays
-exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+## current displays
+# exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+## Thinkad dual screen
+# exec --no-startup-id xrandr --output VGA1 --right-of LVDS1 --auto
 
 # setting variables for later use
 # use xrandr and/or arandr to know the names of your monitors
@@ -113,6 +115,21 @@ bindsym $mod+Shift+7 move container to workspace 7; workspace 7
 bindsym $mod+Shift+8 move container to workspace 8; workspace 8
 bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
+
+
+
+
+### Touchpad
+
+# Disable touchpad
+exec_always --no-startup-id synclient TouchpadOff=1
+
+
+
+
+
+
+
 
 ################# menu's in arcolinux
 
@@ -550,23 +567,25 @@ for_window [class="Terminator"] focus
 for_window [class="Urxvt"] focus
 for_window [class="Alacritty"] focus
 
-
-################# audio settings                   
+### Media Keys
+# audio settings                   
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pipewire sset Master '5%+'"
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pipewire sset Master '5%-'"
 bindsym shift+XF86AudioRaiseVolume exec --no-startup-id "amixer -D pipewire sset Master '10%+'"
 bindsym shift+XF86AudioLowerVolume exec --no-startup-id "amixer -D pipewire sset Master '10%-'"
-
-
 bindsym XF86AudioMute exec --no-startup-id "amixer -D pipewire set Master toggle"
+
+# microphone mute
+bindcode 190 exec --no-startup-id 
+
 # https://github.com/acrisci/playerctl/
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
-################# xbacklight                       
+# xbacklight                       
 
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
@@ -603,7 +622,7 @@ popup_during_fullscreen smart
 ################# bar appearance                   
 
 bar {
-	status_command i3status -c ~/.config/i3status/20221128-i3status.conf
+	status_command i3status -c ~/.config/i3status/20221219-i3status.conf
 #    	workspace_buttons yes
 	font pango:monospace 10
 #	font Noto Sans
