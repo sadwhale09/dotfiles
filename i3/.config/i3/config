@@ -199,6 +199,13 @@ bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 ################# Moving around in i3              
+## Scrachpad
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
