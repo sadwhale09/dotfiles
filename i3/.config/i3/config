@@ -502,21 +502,12 @@ bindsym $mod+F6 exec --no-startup-id vlc;focus
 bindsym $mod+F7 exec --no-startup-id virtualbox;focus
 
 # file management
+set $filemanager thunar
 for_window [class="Thunar"] focus
 bindsym $mod+F8 exec --no-startup-id thunar;focus
-#bindsym $mod+Shift+Return exec --no-startup-id thunar;focus
-bindsym $mod+Shift+Return exec --no-startup-id nautilus;focus
-bindsym $mod+Shift+KP_Enter exec --no-startup-id thunar;focus
-# bindsym control+mod1+b exec --no-startup-id thunar;focus
+bindsym $mod+Shift+Return exec --no-startup-id $filemanager;focus
+bindsym $mod+Shift+KP_Enter exec --no-startup-id $filemanager;focus
 
-# mail application
-bindsym $mod+F9 exec --no-startup-id evolution;focus
-# bindsym $mod+F9 exec --no-startup-id geary;focus
-# bindsym control+mod1+e exec --no-startup-id geary;focus
-
-# music
-bindsym $mod+F10 exec --no-startup-id spotify;focus
-# bindsym control+mod1+s exec --no-startup-id spotify;focus
 
 ################# screenshots                      
 
