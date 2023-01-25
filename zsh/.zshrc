@@ -129,7 +129,8 @@ alias vim="nvim"
 # Default to opening files
 alias o="xdg-open"
 
-
+# For what I use all the time
+alias plan="xdg-open ~/Documents/plan-arco/Plan.ods &"
 
 
 ## Color man page
