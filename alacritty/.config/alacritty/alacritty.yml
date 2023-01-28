@@ -81,7 +81,7 @@ window:
   #startup_mode: Windowed
 
   # Window title
-  title: XD
+  title: HACKERMAN TIME
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
