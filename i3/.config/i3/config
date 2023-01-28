@@ -363,7 +363,7 @@ bindsym $mod+w exec --no-startup-id $webbrowser;focus
 
 # file management
 # set $filemanager thunar
-set $filemanager nautilus 
+set $filemanager thunar 
 for_window [class="Thunar"] focus
 for_window [class="Nautilus"] focus
 bindsym $mod+Shift+Return exec --no-startup-id $filemanager;focus
@@ -480,7 +480,8 @@ popup_during_fullscreen smart
 ################# bar appearance                   
 
 bar {
-        status_command i3status -c ~/.config/i3status/20221219-i3status.conf
+        # status_command i3status -c ~/.config/i3status/20221219-i3status.conf
+        status_command i3status -c ~/.config/i3status/default-i3status.conf
 #    	workspace_buttons yes
                 font pango:roboto mono 10
 #	font Noto Sans
