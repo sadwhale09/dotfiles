@@ -285,48 +285,8 @@ bindsym $mod+Mod1+Ctrl+Left resize grow width 1 px or 1 ppt
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # choose your font
-font pango:Noto Mono Regular 6
+font pango:roboto mono bold 6
 
-################# assign applications to workspaces 
-
-# Assign application to start on a specific workspace
-# you can find the class with the program xprop
-
-# Example - make browser start on workspace 3
-# assign [class="Firefox|Vivaldi-stable|Vivaldi-snapshot|Opera"]                      → 3
-# assign [class="Chromium|Google-chrome"]                    → 3
-
-# Workspace 2 text editor related
-# assign [class="sublime-text|sublime_text|Sublime_text|subl|Subl|subl3|Subl3"]       → 2
-# assign [class="Xed|xed|Brackets|Atom|Code|Geany"]                                   → 2
-
-# Workspace 3 Inkscape
-# assign [class="Inkscape"]                                                           → 3
-
-# Workspace 4 Gimp
-# assign [class="Gimp"]                                                               → 4
-
-# Workspace 5 Images and meld
-# assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → 5
-# assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
-# assign [class="Meld"]                                                               → 5
-
-# Workspace 6 all video related software
-# assign [class="Vlc|vlc"]                                                            → 6
-
-# Workspace 7 virtual machines and settings
-# assign [class="Vmplayer|VirtualBox"]						    → 7
-
-# Workspace 8 file managers
-# assign [class="Nemo|Thunar|Caja|nautilus|Nautilus"]                                 → 8
-
-# Workspace 9 email clients
-# assign [class="Geary|Evolution"]                                                    → 9
-
-# Workspace 10 music related
-# assign [class="Spotify|spotify"]                                                    → 10
-# fix for spotify not moving to workspace 10
-# for_window [class="Spotify"] move to workspace 10
 
 ################# autostart - execute applications at boot time
 
@@ -336,23 +296,6 @@ font pango:Noto Mono Regular 6
 # Autotiling
 exec_always --no-startup-id autotiling
 
-# Browser
-# exec --no-startup-id vivaldi-stable
-# for_window [class="Vivaldi-stable"] focus
-
-# Text-editor
-# exec --no-startup-id geany
-# exec --no-startup-id atom
-
-# File manager
-# exec --no-startup-id thunar
-
-# Mail clients
-# exec --no-startup-id evolution
-
-# Music
-# exec --no-startup-id spotify
-#for_window [class="Spotify"] focus
 
 # TRAY APPLICATIONS
 
@@ -372,21 +315,14 @@ exec --no-startup-id nm-applet
 ## kayboard
 # num lock activated
 exec_always --no-startup-id numlockx on
+
 # swap capslock and escape
 #exec_always --no-startup-id setxkbmap -option caps:swapescape
 
-# dropbox
-# exec --no-startup-id dropbox start
-
-# insync
-# exec --no-startup-id insync start
 
 # volume
 # exec --no-startup-id pasystray
 exec --no-startup-id volumeicon
-
-# variety
-# exec --no-startup-id variety
 
 # clipman
 exec --no-startup-id xfce4-clipman
@@ -414,7 +350,7 @@ bindsym $mod+KP_Enter exec --no-startup-id alacritty;focus
 bindsym control+Shift+Escape exec --no-startup-id htop;focus
 
 # pavucontrol
-# bindsym control+mod1+u exec --no-startup-id pavucontrol
+bindsym $mod+XF86AudioMute exec --no-startup-id pavucontrol;focus
 
 # xkill
 bindsym --release $mod+Escape exec xkill
@@ -454,7 +390,7 @@ for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable
 # for_window [class="qt5ct|Lxappearance] floating enable
 for_window [class="Nitrogen"] floating disable
-for_window [class="Pavucontrol"] floating disable
+for_window [class="Pavucontrol"] floating enable resize set 600 600 
 for_window [class="Peek"] floating enable
 for_window [class="^Skype$"] floating enable
 for_window [class="^Spotify$"] floating disable
@@ -485,9 +421,6 @@ for_window [window_role="setup"] floating enable
 ################# give focus to applications       
 
 for_window [class="Gnome-terminal"] focus
-for_window [class="Termite"] focus
-for_window [class="Terminator"] focus
-for_window [class="Urxvt"] focus
 for_window [class="Alacritty"] focus
 
 ### Media Keys
@@ -548,7 +481,7 @@ popup_during_fullscreen smart
 bar {
         status_command i3status -c ~/.config/i3status/20221219-i3status.conf
 #    	workspace_buttons yes
-                font pango:monospace 10
+                font pango:roboto mono 10
 #	font Noto Sans
                 position top
 }
