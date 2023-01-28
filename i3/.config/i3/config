@@ -203,8 +203,8 @@ bindsym $mod+Shift+Right move right
 
 # next/previous workspace
 
-bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
+bindsym Mod1+Tab focus next
+bindsym Mod1+Shift+Tab focus prev
 bindsym $mod+Tab workspace back_and_forth
 
 # navigate workspaces next / previous
