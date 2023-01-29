@@ -118,6 +118,11 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # emoji picker
 bindsym $mod+grave exec --no-startup-id ~/scripts/emoji.sh
 
+# memes folder
+bindsym $mod+m exec --no-startup-id thunar ~/memes; focus
+for_window [title="memes"] floating enable resize set 600 700
+
+
 # start rofi
 bindsym mod1+space exec --no-startup-id rofi -show drun -font "Noto Sans 13"
 
