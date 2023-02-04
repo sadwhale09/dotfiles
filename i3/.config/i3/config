@@ -338,11 +338,13 @@ exec --no-startup-id nm-applet
 
 # volume
 # exec --no-startup-id pasystray
-exec volumeicon
+exec --no-startup-id volumeicon
 
 # clipman
 exec --no-startup-id xfce4-clipman
 
+# power manager (bttery icon) 
+exec --no-startup-id xfce4-power-manager
 
 ################# system applications       
 
