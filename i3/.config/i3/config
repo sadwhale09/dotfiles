@@ -492,6 +492,7 @@ popup_during_fullscreen smart
 ################# bar appearance                   
 
 bar {
+  tray_output primary
         # status_command i3status -c ~/.config/i3status/20221219-i3status.conf
         status_command i3status -c ~/.config/i3status/20230129-i3status.conf
 #    	workspace_buttons yes
