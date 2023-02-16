@@ -196,7 +196,7 @@ bindsym $mod+Shift+space floating toggle
 # change focus
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
-##bindsym $mod+$up focus up
+bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
