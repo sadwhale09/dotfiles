@@ -344,11 +344,11 @@ exec --no-startup-id volumeicon
 exec --no-startup-id xfce4-clipman
 
 # power manager (bttery icon) 
-exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id xfce4-power-manager
 
 ################# system applications       
 
-exec --no-startup-id xfce4-power-manager &
+# exec --no-startup-id xfce4-power-manager &
 # ommitted next line to get super key to bring up the menu in xfce and avoid error then in i3
 # IF xfsettingsd is activated you can not change themes
 # exec --no-startup-id xfsettingsd &
