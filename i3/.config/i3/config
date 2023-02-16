@@ -19,11 +19,14 @@ set $mod Mod4
 
 ################# Define the movements keys - variables
 # This is setup for qwerty
-set $up l
-set $down k
-set $left j
-set $right semicolon 
-
+# set $up l
+# set $down k
+# set $left j
+# set $right semicolon 
+set $up k
+set $down j
+set $left h
+set $right l
 
 ## Define default programs
 set $edit nvim
@@ -224,9 +227,9 @@ bindsym $mod+Tab workspace back_and_forth
 
 # navigate workspaces next / previous
 bindsym Mod1+Ctrl+Right workspace next
-bindsym Mod1+Ctrl+semicolon workspace next
+bindsym Mod1+Ctrl+$right workspace next
 bindsym Mod1+Ctrl+Left workspace prev
-bindsym Mod1+Ctrl+J workspace prev
+bindsym Mod1+Ctrl+$left workspace prev
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
