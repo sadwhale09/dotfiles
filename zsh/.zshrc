@@ -132,6 +132,7 @@ alias o="xdg-open"
 # For what I use all the time
 alias plan="xdg-open ~/Documents/plan-arco/Plan.ods &"
 
+alias yt="youtube-dl"
 
 ## Color man page
 # export LESS_TERMCAP_mb=$'\e[1;32m'
