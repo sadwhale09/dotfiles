@@ -128,6 +128,9 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # emoji picker
 bindsym $mod+grave exec --no-startup-id ~/scripts/emoji.sh
 
+# display script
+bindsym $mod+F7 exec --no-startup-id ~/scripts/display-picker.sh
+
 # memes folder
 bindsym $mod+m exec --no-startup-id thunar ~/memes; focus
 # for_window [title="memes"] floating enable resize set 600 700 # Commented out because firefox memes also afloated

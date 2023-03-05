@@ -133,6 +133,8 @@ alias o="xdg-open"
 alias plan="xdg-open ~/Documents/plan-arco/Plan.ods &"
 
 alias yt="youtube-dl"
+alias cfg="vi ~/.config/i3/config"
+alias pogoda="curl https://wttr.in"
 
 ## Color man page
 man() {
@@ -157,3 +159,12 @@ man() {
 #         command man "$@"
 # }
 # export PAGER="most"
+#
+
+
+## asdf
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
