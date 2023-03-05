@@ -126,6 +126,8 @@ alias xclip="xclip -sel c"
 alias vi="nvim"
 alias vim="nvim"
 
+alias lg="lazygit"
+
 # Default to opening files
 alias o="xdg-open"
 
