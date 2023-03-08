@@ -6,3 +6,8 @@
 xrandr --output VGA1 --right-of LVDS1 --auto
 # grep -v "#" ~/scripts/displays | rofi -dmenu | tr -d '\n' | xrandr
 
+if [[xrandr -q | grep "VGA1 connected"]]; then
+  xrandr --output VGA1 --right-of LVDS1 --auto
+else
+  xrandr --auto
+fi
