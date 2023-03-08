@@ -142,6 +142,9 @@ bindsym $mod+F1 exec --no-startup-id i3-sensible-terminal -e $edit ~/.config/i3/
 # start rofi
 bindsym mod1+space exec --no-startup-id rofi -show drun -font "Noto Sans 13"
 
+# rofi show windows list
+bindsym mod1+$mod+Tab exec --no-startup-id rofi -show window -font "Noto Sans 13"
+
 ################# how to exit, logoff, suspend, ...
 
 # Backup exit
