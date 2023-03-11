@@ -82,7 +82,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source /home/$USER/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -136,31 +135,27 @@ alias cfg="vi ~/.config/i3/config"
 alias pogoda="curl https://wttr.in"
 
 ## Color man page
-man() {
-  export LESS_TERMCAP_mb=$'\e[1;32m'
-  export LESS_TERMCAP_md=$'\e[1;32m'
-  export LESS_TERMCAP_me=$'\e[0m'
-  export LESS_TERMCAP_se=$'\e[0m'
-  export LESS_TERMCAP_so=$'\e[1;33m'
-  export LESS_TERMCAP_ue=$'\e[0m'
-  export LESS_TERMCAP_us=$'\e[1;4;31m'
-  command man "$@"
-}
-# man() {
-#         LESS_TERMCAP_mb=$'\e[01;31m'
-#         LESS_TERMCAP_md=$'\e[01;31m' \
-#         LESS_TERMCAP_me=$'\e[0m' \
-#         LESS_TERMCAP_se=$'\e[0m' \
-#         LESS_TERMCAP_so=$'\e[45;93m' \
-#         LESS_TERMCAP_ue=$'\e[0m' \
-#         LESS_TERMCAP_us=$'\e[4;93m' \
-#     
-#         command man "$@"
-# }
-# export PAGER="most"
-#
+# https://raw.githubusercontent.com/ael-code/zsh-colored-man-pages/master/colored-man-pages.plugin.zsh
+# termcap
+# ks       make the keypad send commands
+# ke       make the keypad send digits
+# vb       emit visual bell
+# mb       start blink
+# md       start bold
+# me       turn off bold, blink and underline
+# so       start standout (reverse video)
+# se       stop standout
+# us       start underline
+# ue       stop underline
 
-
+# Have less display colours
+export LESS_TERMCAP_md=$'\e[01;36m' \
+export LESS_TERMCAP_me=$'\e[0m' \
+export LESS_TERMCAP_us=$'\e[01;32m' \
+export LESS_TERMCAP_ue=$'\e[0m' \
+export LESS_TERMCAP_so=$'\e[01;33m' \
+export LESS_TERMCAP_se=$'\e[0m' \
+export MANPAGER='less -s -M +Gg'
 ## asdf
 . "$HOME/.asdf/asdf.sh"
 # append completions to fpath
