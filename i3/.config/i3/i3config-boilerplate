@@ -14,11 +14,15 @@
 # Tab = TAB key
 
 ################# Define the $mod variable/key
-# Set Super key
+# set Super key
 set $mod Mod4
 
 ################# Define the movements keys - variables
-# Superior Vim motion binds
+# This is setup for qwerty
+# set $up l
+# set $down k
+# set $left j
+# set $right semicolon 
 set $up k
 set $down j
 set $left h
@@ -30,7 +34,58 @@ set $files thunar
 set $browser firefox
 
 
-## Workspaces
+################# Single and Dual screen
+## current displays
+# exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+## Thinkad dual screen
+# exec --no-startup-id xrandr --output VGA1 --right-of LVDS1 --auto
+
+# setting variables for later use
+# use xrandr and/or arandr to know the names of your monitors
+# use this line to tell which monitor is on the right
+# xrandr --output DVI-I-2 --right-of DVI-I-1 --auto
+# exec --no-startup-id xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
+# exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
+# exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
+# exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
+# exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+# using names instead of numbers for the workspaces
+# set $ws1 "1: Terminal"
+# set $ws2 "2: Browser"
+# set $ws3 "3: Mail"
+# set $ws4 "4: File Manager"
+
+# switch to workspace
+#bindsym $mod+1 workspace $ws1
+#bindsym $mod+2 workspace $ws2
+#bindsym $mod+3 workspace $ws3
+#bindsym $mod+4 workspace $ws4
+
+# current setup
+
+# set $firstMonitor LVDS1
+# set $secondMonitor DP1
+
+# Other Examples
+
+#set $firstMonitor DP3
+#set $secondMonitor LVDS1
+
+#set $firstMonitor DVI-I-0
+#set $secondMonitor HDMI-0
+
+#set $firstMonitor DVI-0
+#set $secondMonitor DVI-1
+
+#set $firstMonitor DVI-I-1
+#set $secondMonitor DVI-D-1
+
+#set $firstMonitor HDMI-1
+#set $secondMonitor HDMI-2
+
 workspace 1 output $firstMonitor
 workspace 2 output $firstMonitor
 workspace 3 output $firstMonitor
@@ -42,7 +97,7 @@ workspace 8 output $secondMonitor
 workspace 9 output $secondMonitor
 workspace 10 output $secondMonitor
 
-# Switch to workspace
+# switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -54,7 +109,7 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# Move focused container to workspace
+# move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
 bindsym $mod+Shift+2 move container to workspace 2; workspace 2
 bindsym $mod+Shift+3 move container to workspace 3; workspace 3
@@ -67,29 +122,31 @@ bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
 
-# Start dmenu
+# start dmenu
 bindsym $mod+d exec --no-startup-id dmenu_run
 
-# Emoji picker
+# emoji picker
 bindsym $mod+grave exec --no-startup-id ~/scripts/emoji.sh
 
-# Display script
+# display script
 bindsym $mod+F7 exec --no-startup-id ~/scripts/display-picker.sh
 
-# Memes folder
+# memes folder
 bindsym $mod+m exec --no-startup-id thunar ~/memes; focus
 # for_window [title="memes"] floating enable resize set 600 700 # Commented out because firefox memes also afloated
 
-# Quick config open
+# quick config open
 bindsym $mod+F1 exec --no-startup-id i3-sensible-terminal -e $edit ~/.config/i3/config; focus
 
-# Start rofi
+
+# start rofi
 bindsym mod1+space exec --no-startup-id rofi -show drun -font "Noto Sans 13"
 
-# Rofi show windows list
+# rofi show windows list
 bindsym mod1+$mod+Tab exec --no-startup-id rofi -show window -font "Noto Sans 13"
 
 ################# how to exit, logoff, suspend, ...
+
 # Backup exit
 # Press ctrl+alt+x - check toolbar for next choices
 bindsym control+mod1+X mode "$mode_system"
@@ -104,22 +161,26 @@ mode "$mode_system" {
         bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
         bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
 
-# Back to normal: Enter or Escape
+# back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
+## i3lock
+# bindsym $mod+l exec --no-startup-id slock
+# bindsym $mod+l exec --no-startup-id i3lock --color 000000 
+# bindsym $mod+Mod1+l exec --no-startup-id i3lock --color 000000 --no-verify
 
-################# Reload changed configuration     
+################# reload changed configuration     
 
-# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# Reload the configuration file
+# reload the configuration file
 bindsym $mod+Shift+c reload
 
 ################# Stopping an application          
 
-# Kill focused window
+# kill focused window
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
@@ -198,6 +259,7 @@ default_orientation horizontal
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
+# qwerty/azerty issue for letter z
 # bindsym $mod+s layout stacking
 bindsym $mod+z layout tabbed
 bindsym $mod+e layout toggle split
@@ -213,39 +275,39 @@ bindsym $mod+a focus parent
 
 ################# resize  
 
-# Resizing by 10
-# bindsym $mod+Mod1+Ctrl+$Right resize shrink width 10 px or 1 ppt
-# bindsym $mod+Mod1+Ctrl+$Up resize grow height 10 px or 1 ppt
-# bindsym $mod+Mod1+Ctrl+$Down resize shrink height 10 px or 1 ppt
-# bindsym $mod+Mod1+Ctrl+$Left resize grow width 10 px or 1 ppt
+# Resizing by 1
+bindsym $mod+Mod1+Ctrl+$Right resize shrink width 10 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+$Up resize grow height 10 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+$Down resize shrink height 10 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+$Left resize grow width 10 px or 1 ppt
 
 # old resize keybindings
 # resize window (you can also use the mouse for that)
 
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 
-mode "resize" {
+# mode "resize" {
 # These bindings trigger as soon as you enter the resize mode
 
 # Pressing left will shrink the window’s width.
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-     bindsym $left       resize shrink width 10 px or 10 ppt
-     bindsym $down       resize grow height 10 px or 10 ppt
-     bindsym $up         resize shrink height 10 px or 10 ppt
-     bindsym $right      resize grow width 10 px or 10 ppt
+#      bindsym $left       resize shrink width 10 px or 10 ppt
+#      bindsym $down       resize grow height 10 px or 10 ppt
+#      bindsym $up         resize shrink height 10 px or 10 ppt
+#      bindsym $right      resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-     bindsym Left        resize shrink width 10 px or 10 ppt
-     bindsym Down        resize grow height 10 px or 10 ppt
-     bindsym Up          resize shrink height 10 px or 10 ppt
-     bindsym Right       resize grow width 10 px or 10 ppt
+#      bindsym Left        resize shrink width 10 px or 10 ppt
+#      bindsym Down        resize grow height 10 px or 10 ppt
+#      bindsym Up          resize shrink height 10 px or 10 ppt
+#      bindsym Right       resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-     bindsym Return mode "default"
-     bindsym Escape mode "default"
-}
+#      bindsym Return mode "default"
+#      bindsym Escape mode "default"
+# }
 
 ################# choose the font                  
 
@@ -288,7 +350,8 @@ exec --no-startup-id nm-applet
 # Swap capslock and escape
 # exec_always --no-startup-id setxkbmap -option caps:swapescape
 
-## Volume
+
+# volume
 # exec --no-startup-id pasystray
 exec --no-startup-id volumeicon
 
@@ -448,7 +511,10 @@ popup_during_fullscreen smart
 
 bar {
   tray_output primary
-    status_command i3status -c ~/.config/i3status/20230129-i3status.conf
-    font pango:roboto mono 10
-    position top
+        # status_command i3status -c ~/.config/i3status/20221219-i3status.conf
+        status_command i3status -c ~/.config/i3status/20230129-i3status.conf
+#    	workspace_buttons yes
+                font pango:roboto mono 10
+#	font Noto Sans
+                position top
 }
