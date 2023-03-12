@@ -461,6 +461,9 @@ bindsym XF86AudioMute exec --no-startup-id "amixer -D pipewire set Master toggle
 # microphone mute
 bindcode 190 exec --no-startup-id 
 
+# ThinkVantage button
+bindcode 156 exec --no-startup-id simplescreenrecorder 
+
 # https://github.com/acrisci/playerctl/
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
