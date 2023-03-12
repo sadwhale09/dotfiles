@@ -25,4 +25,5 @@
 | zsh                   | Zshell 
 | xfce4-clipman         | Clipboard
 | volumeicon            | Self-explanatory
-
+| tmux                  | Teminal multiplexer
+| neovim                | Text editor
