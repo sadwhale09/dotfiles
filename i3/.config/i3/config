@@ -321,6 +321,8 @@ font pango:roboto mono bold 6
 
 # USER APPLICATIONS TO START AT BOOT
 
+# Hide mouse cursor
+exec_always --no-startup-id unclutter &
 
 # Autotiling
 exec_always --no-startup-id autotiling
@@ -335,18 +337,18 @@ exec_always --no-startup-id autotiling
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 
-# bluetooth
+# Bluetooth
 # exec --no-startup-id blueberry-tray
 
-# network
+# Network
 exec --no-startup-id nm-applet
 
-## kayboard
-# num lock activated
+## Keyboard
+# Numlock activated
 # exec_always --no-startup-id numlockx on
 
-# swap capslock and escape
-#exec_always --no-startup-id setxkbmap -option caps:swapescape
+# Swap capslock and escape
+# exec_always --no-startup-id setxkbmap -option caps:swapescape
 
 
 # volume
