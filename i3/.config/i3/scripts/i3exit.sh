@@ -3,13 +3,14 @@
 
 case "$1" in
     lock)
-        betterlockscreen -l dimblur -- --time-str="%H:%M"
+        i3lock --color 000000 
+        # betterlockscreen -l dimblur -- --time-str="%H:%M"
         ;;
     logout)
         i3-msg exit
         ;;
     suspend)
-        systemctl suspend
+        i3lock --color 000000 && systemctl suspend
         ;;
     hibernate)
         systemctl hibernate
