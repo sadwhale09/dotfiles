@@ -157,8 +157,9 @@ export LESS_TERMCAP_so=$'\e[01;33m' \
 export LESS_TERMCAP_se=$'\e[0m' \
 export MANPAGER='less -s -M +Gg'
 ## asdf
-. "$HOME/.asdf/asdf.sh"
+# . "$HOME/.asdf/asdf.sh"
 # append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
+# fpath=(${ASDF_DIR}/completions $fpath)
+#
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
