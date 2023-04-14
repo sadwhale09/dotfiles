@@ -133,6 +133,7 @@ alias plan="xdg-open ~/Documents/plan-arco/Plan.ods &"
 alias yt="youtube-dl"
 alias cfg="vi ~/.config/i3/config"
 alias pogoda="curl https://wttr.in"
+alias cal="cal -3m"
 
 ## Color man page
 # https://raw.githubusercontent.com/ael-code/zsh-colored-man-pages/master/colored-man-pages.plugin.zsh
