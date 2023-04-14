@@ -164,7 +164,9 @@ bindsym $mod+Shift+Right move right
 
 # move window to previous/next workspace
 bindsym Mod1+Ctrl+Shift+$Right move to workspace next; workspace next
-bindsym Mod1+Ctrl+Shift+$Left move to workspace previous; workspace previous
+bindsym $mod+Shift+Page_Down move to workspace next; workspace next
+bindsym Mod1+Ctrl+Shift+$Left move to workspace prev; workspace prev
+bindsym $mod+Shift+Page_Up move to workspace prev; workspace prev
 
 ################# moving around workspaces         
 
@@ -177,8 +179,10 @@ bindsym $mod+Tab workspace back_and_forth
 # navigate workspaces next / previous
 bindsym Mod1+Ctrl+Right workspace next
 bindsym Mod1+Ctrl+$right workspace next
+bindsym $mod+Page_Down workspace next
 bindsym Mod1+Ctrl+Left workspace prev
 bindsym Mod1+Ctrl+$left workspace prev
+bindsym $mod+Page_Up workspace prev
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
