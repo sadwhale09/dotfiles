@@ -163,9 +163,9 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # move window to previous/next workspace
-bindsym Mod1+Ctrl+Shift+$Right move to workspace next; workspace next
+bindsym Mod1+Ctrl+Shift+$right move to workspace next; workspace next
 bindsym $mod+Shift+Page_Down move to workspace next; workspace next
-bindsym Mod1+Ctrl+Shift+$Left move to workspace prev; workspace prev
+bindsym Mod1+Ctrl+Shift+$left move to workspace prev; workspace prev
 bindsym $mod+Shift+Page_Up move to workspace prev; workspace prev
 
 ################# moving around workspaces         
@@ -427,11 +427,11 @@ bindsym $mod+y border pixel 1
 bindsym $mod+u border none
 
 # new_window pixel 1
-new_window normal
+# new_window normal
 #new_window none
 
 # new_float pixel 1
-new_float normal
+# new_float normal
 #new_float none
 
 ################# Popups  control                  
