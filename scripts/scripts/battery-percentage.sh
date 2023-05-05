@@ -12,7 +12,7 @@ if [ "$current" -lt "$low" ]; then  # -lt == less than. Opposite is -gt
   fi
   # elif [ "$current" = "$full" ] #|| [ "$current" -gt "$full" ]
 elif [ "$current" == "$full" ]; then #|| [ "$current" -gt "$full" ]
-  notify-send "Good to unplug now"
+  notify-send "Good to unplug now"  # TODO It shows when percentage goes down to set value and is not plugged
 elif [ "$state" = "state:full" ]; then #|| [ "$current" -gt "$full" ]
   notify-send "Battery full"
 fi
