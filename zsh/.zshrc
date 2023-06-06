@@ -81,7 +81,8 @@ ZSH_THEME="sadfuk"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source /home/$USER/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /home/$USER/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/$USER/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -164,3 +165,4 @@ export MANPAGER='less -s -M +Gg'
 #
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+setxkbmap pl
