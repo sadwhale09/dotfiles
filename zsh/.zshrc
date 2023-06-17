@@ -165,4 +165,4 @@ export MANPAGER='less -s -M +Gg'
 #
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
-setxkbmap pl
+# setxkbmap pl
