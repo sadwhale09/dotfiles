@@ -1,3 +1,17 @@
 alias nrsf="sudo nixos-rebuild switch --flake /home/jr/Documents/nix-config#nixos"
 alias lg=lazygit
 alias vi=nvim
+alias vim=nvim
+
+# Copy to system clipboard
+alias xclip="xclip -sel c"
+
+# Default to opening files
+alias o="xdg-open"
+
+# For what I use all the time
+# alias plan="xdg-open ~/Documents/plan-arco/Plan.ods &"
+
+alias yt="youtube-dl"
+alias pogoda="curl https://wttr.in"
+alias cal="cal -3m"
