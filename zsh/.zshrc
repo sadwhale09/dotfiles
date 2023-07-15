@@ -1,11 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -16,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="sadfuk"
+ZSH_THEME="pmcgee" # set by `omz`
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -78,11 +71,13 @@ ZSH_THEME="sadfuk"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  colored-man-pages
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
-#source /home/$USER/Git/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /home/$USER/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -96,10 +91,7 @@ source /home/$USER/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlig
 # else
 #   export EDITOR='mvim'
 # fi
-#
-# Default editor
-export VISUAL=nvim
-export EDITOR=nvim
+
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -113,56 +105,11 @@ export EDITOR=nvim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# The aboove is no more! 
+# Moved zsh-syntax-highlighting to .oh-my-zsh/custom/plugins/
+# And added to plugins 35-ish lines above
+alias so="source ~/.zshrc"
 
-# Copy to system clipboard
-alias xclip="xclip -sel c"
-
-# Vim and Vi to Neovim
-alias vi="nvim"
-alias vim="nvim"
-
-alias lg="lazygit"
-
-# Default to opening files
-alias o="xdg-open"
-
-# For what I use all the time
-alias plan="xdg-open ~/Documents/plan-arco/Plan.ods &"
-
-alias yt="youtube-dl"
-alias cfg="vi ~/.config/i3/config"
-alias pogoda="curl https://wttr.in"
-alias cal="cal -3m"
-
-## Color man page
-# https://raw.githubusercontent.com/ael-code/zsh-colored-man-pages/master/colored-man-pages.plugin.zsh
-# termcap
-# ks       make the keypad send commands
-# ke       make the keypad send digits
-# vb       emit visual bell
-# mb       start blink
-# md       start bold
-# me       turn off bold, blink and underline
-# so       start standout (reverse video)
-# se       stop standout
-# us       start underline
-# ue       stop underline
-
-# Have less display colours
-export LESS_TERMCAP_md=$'\e[01;36m' \
-export LESS_TERMCAP_me=$'\e[0m' \
-export LESS_TERMCAP_us=$'\e[01;32m' \
-export LESS_TERMCAP_ue=$'\e[0m' \
-export LESS_TERMCAP_so=$'\e[01;33m' \
-export LESS_TERMCAP_se=$'\e[0m' \
-export MANPAGER='less -s -M +Gg'
-## asdf
-# . "$HOME/.asdf/asdf.sh"
-# append completions to fpath
-# fpath=(${ASDF_DIR}/completions $fpath)
-#
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
-# setxkbmap pl
+# Load aliases and shortcuts if existent.
+[ -f "$HOME/aliasrc" ] && source "$HOME/aliasrc"
