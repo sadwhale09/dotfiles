@@ -6,7 +6,7 @@
 ## DNF CONFIGURATION
 sudo echo "max_parallel_downloads=10" >>/etc/dnf/dnf.conf
 sudo echo "fastestmirror=True" >>/etc/dnf/dnf.conf
-sudo dnf update && sudo dnf upgrade
+sudo dnf update -y && sudo dnf upgrade -y
 
 ## OPTIONAL: Fedora 38 thing: ENABLIBG DNF5
 #sudo dnf install dnf5 dnf5-plugins
@@ -17,13 +17,13 @@ sudo dnf update && sudo dnf upgrade
 #sudo fwupdmgr update
 
 ## ENABLE RPMFUSION
-sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf upgrade --refresh
-sudo dnf groupupdate core
+sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf upgrade -y --refresh
+sudo dnf groupupdate -y core
 
 ## CONFIGURATION OF RPMFUSION
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 ## MULTIMEDIA
 ## https://rpmfusion.org/Howto/Multimedia
@@ -32,8 +32,8 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing
 
 ## Install media codecs
-sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
-sudo dnf install lame\* --exclude=lame-devel
+sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install -y lame\* --exclude=lame-devel
 sudo dnf group upgrade --with-optional Multimedia
 
 ## Install additional codec
