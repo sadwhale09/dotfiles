@@ -13,7 +13,7 @@ ZSH_THEME="pmcgee" # set by `omz`
 export VISUAL=nvim
 export EDITOR=nvim
 
-
+# export GOPATH=$HOME/go
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
