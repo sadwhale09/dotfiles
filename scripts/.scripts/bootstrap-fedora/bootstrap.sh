@@ -4,5 +4,5 @@
 sh ./components/enabling-things.sh
 
 # Tmux bootstrap
-sh ./components/tmux.sh
+# sh ./components/tmux.sh
 
