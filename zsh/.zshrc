@@ -76,6 +76,7 @@ export EDITOR=nvim
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   colored-man-pages
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /home/jr/dotfiles/zsh/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /home/jr/dotfiles/zsh/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # The aboove is no more! 
 # Moved zsh-syntax-highlighting to .oh-my-zsh/custom/plugins/
 # And added to plugins 35-ish lines above
