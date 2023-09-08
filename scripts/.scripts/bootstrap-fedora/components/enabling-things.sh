@@ -4,8 +4,8 @@
 #sudo hostnamectl set-hostname "New_Custom_Name"
 
 ## DNF CONFIGURATION
-sudo echo "max_parallel_downloads=10" >>/etc/dnf/dnf.conf
-sudo echo "fastestmirror=True" >>/etc/dnf/dnf.conf
+sudo echo "max_parallel_downloads=10" >> /etc/dnf/dnf.conf
+sudo echo "fastestmirror=True" >> /etc/dnf/dnf.conf
 sudo dnf update -y && sudo dnf upgrade -y
 
 ## OPTIONAL: Fedora 38 thing: ENABLIBG DNF5
@@ -29,12 +29,12 @@ sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-rel
 ## https://rpmfusion.org/Howto/Multimedia
 ## Switch to full ffmpeg
 ## This solves problems of out-ouf-sync video and audio after scrolling in MPV
-sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf swap -y ffmpeg-free ffmpeg --allowerasing
 
 ## Install media codecs
 sudo dnf install -y gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf install -y lame\* --exclude=lame-devel
-sudo dnf group upgrade --with-optional Multimedia
+sudo dnf group upgrade -y --with-optional Multimedia
 
 ## Install additional codec
 ## The following command will install the complements multimedia packages needed by gstreamer enabled applications:
