@@ -9,7 +9,7 @@ sudo echo "fastestmirror=True" >> /etc/dnf/dnf.conf
 sudo dnf update -y && sudo dnf upgrade -y
 
 ## OPTIONAL: Fedora 38 thing: ENABLIBG DNF5
-#sudo dnf install dnf5 dnf5-plugins
+sudo dnf install dnf5 dnf5-plugins
 
 ## OPTIONAL: Firmware Updates
 #sudo fwupdmgr refresh --force
