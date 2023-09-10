@@ -1,2 +1,3 @@
-sudo dnf5 in "fontawesome*"
-sudo dnf5 in "jetbrains-mono*"
+sudo dnf5 in "fontawesome*" -y
+sudo dnf5 in "jetbrains-mono*" -y
+fc-cache -v
