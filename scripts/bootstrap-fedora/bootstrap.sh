@@ -8,3 +8,6 @@ sh ./components/enabling-things.sh
 
 # Install must-have packages
 sudo dnf5 in $(cat ./packages/must-have-packages) -y
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
