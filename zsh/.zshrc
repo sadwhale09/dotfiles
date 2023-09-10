@@ -76,7 +76,7 @@ export EDITOR=nvim
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   colored-man-pages
-  zsh-syntax-highlighting
+  syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
