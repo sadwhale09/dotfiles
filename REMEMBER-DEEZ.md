@@ -10,4 +10,10 @@
 
 **Note: Relogging helps to apply the results.**
 
+## Tmux
+When stowing tmux, must do:
+> C-b, :source-file ~/.config/tmux/tmux.conf
 
+
+## Change default shell
+> chsh --shell /bin/zsh
