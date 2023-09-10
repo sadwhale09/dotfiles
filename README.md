@@ -26,3 +26,6 @@ When stowing tmux, must do:
 
 ## Change default shell
 > chsh --shell /bin/zsh
+
+## Bash prompt configuration tool
+https://bash-prompt-generator.org/
