@@ -31,4 +31,6 @@ When stowing tmux, must do:
 https://bash-prompt-generator.org/
 
 ## Nvim
+- Pre req: install *gcc* and *unzip*
 git clone git@github.com:sadwhale09/nvim.git ~/.config/nvim
+
