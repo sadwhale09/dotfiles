@@ -6,7 +6,7 @@
 
 
 # -- session creation ----------------------------------------------------------
-set -g default-shell /bin/zsh
+# set -g default-shell /bin/zsh
 
 # prompt for session name when creating a new session, possible values are:
 #   - true
