@@ -1,4 +1,4 @@
-alias nrsf="sudo nixos-rebuild switch --flake /home/jr/Documents/nix-config#nixos"
+alias dnf=dnf5
 alias lg=lazygit
 alias vi=nvim
 alias vim=nvim
