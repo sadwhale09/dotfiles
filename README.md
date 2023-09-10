@@ -29,3 +29,6 @@ When stowing tmux, must do:
 
 ## Bash prompt configuration tool
 https://bash-prompt-generator.org/
+
+## Nvim
+git clone git@github.com:sadwhale09/nvim.git ~/.config/nvim
