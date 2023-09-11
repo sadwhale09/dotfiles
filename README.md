@@ -27,7 +27,7 @@ tmux source-file ~/.config/tmux/tmux.conf
 
 ## Change default shell
 ```sh
-chsh --shell /bin/zsh
+sudo chsh -s /bin/zsh $USER
 ```
 
 ## Bash prompt configuration tool
