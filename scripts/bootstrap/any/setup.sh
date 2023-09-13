@@ -1,1 +1,2 @@
-mv ~/Desktop ~/Dev
+#!/usr/bin/env bash
+mv ~/Desktop ~/coding
