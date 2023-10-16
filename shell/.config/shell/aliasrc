@@ -17,6 +17,8 @@ alias cal='cal -3m'
 # Faster dnf
 alias dnf='sudo dnf5'
 
+# zsh
+alias so='source ~/.zshrc'
 
 
 ## STOLEN FROM .oh-my-zsh/plugins/common-aliases/
