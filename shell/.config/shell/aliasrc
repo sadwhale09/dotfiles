@@ -11,7 +11,7 @@ alias xclip='xclip -sel c'
 alias o='xdg-open'
 
 alias yt='youtube-dl'
-alias pogoda='curl https://wttr.in'
+alias weather='curl https://wttr.in'
 alias cal='cal -3m'
 
 # Faster dnf
