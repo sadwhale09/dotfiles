@@ -1,8 +1,9 @@
 # Colorful prompt
 autoload -U colors && colors
 setopt PROMPT_SUBST     # This allows to print command output in a prompt (git branch ...)
-PROMPT="%B%F{green}[%n@%m]%F{blue}[%F{reset_color}%~%F{blue}]"$'\n'"%F{yellow}[$(git branch | awk '/*/ {print $2}')]%F{reset_color}$%b "
+# PROMPT="%B%F{green}[%n@%m]%F{blue}[%F{reset_color}%~%F{blue}]"$'\n'"%F{yellow}[$(git branch | awk '/*/ {print $2}')]%F{reset_color}$%b "
 # TODO: Add git status indicator
+PROMPT="%B%F{green}[%n@%m]%F{blue}[%F{reset_color}%~%F{blue}]"$'\n'"%F{reset_color}$%b "
 # RPROMPT='%t'          # This makes text on the right (a clock for e example)
 
 
