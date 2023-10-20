@@ -4,8 +4,11 @@ alias lg='lazygit'
 alias vi='nvim'
 alias vim='nvim'
 
-# Copy to system clipboard
+# Copy to system clipboard (Xorg)
 alias xclip='xclip -sel c'
+# Wayland alternative to xclip
+alias c='wl-copy'
+alias p='wl-paste'
 
 # Default to opening files
 alias o='xdg-open'
@@ -63,7 +66,7 @@ alias ff='find . -type f -name'
 alias h='history'
 alias hgrep="fc -El 0 | grep"
 alias help='man'
-alias p='ps -f'
+# alias p='ps -f'
 alias sortnr='sort -n -r'
 alias unexport='unset'
 
