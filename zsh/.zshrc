@@ -7,8 +7,8 @@ PROMPT="%B%F{green}[%n@%m]%F{blue}[%F{reset_color}%~%F{blue}]"$'\n'"%F{reset_col
 # RPROMPT='%t'          # This makes text on the right (a clock for e example)
 
 
-export VISUAL=vi
-export EDITOR=vi
+export VISUAL=nvim
+export EDITOR=nvim
 
 # Basic auto/tab complete:
 autoload -U compinit
