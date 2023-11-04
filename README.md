@@ -56,4 +56,4 @@ sudo yum install tesseract-devel leptonica-devel tesseract-langpack-pol
 ```sh
 tesseract -l pol image.png output
 ```
-- Tesseract writes output witn .txt extension
+- Tesseract writes output with .txt extension
