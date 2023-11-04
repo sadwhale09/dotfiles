@@ -34,7 +34,7 @@ sudo chsh -s /bin/zsh $USER
 https://bash-prompt-generator.org/
 
 ## Nvim
-- Pre req: install *gcc* and *unzip*
+Pre req: install *gcc* and *unzip*
 ```sh
 git clone git@github.com:sadwhale09/nvim.git ~/.config/nvim
 ```
@@ -47,13 +47,13 @@ sudo mv Obsidian-* /usr/local/bin/Obsidian
 ```
 
 ## Image to text
-- Install of Tesseract:
+Install of Tesseract:
 ```sh
 sudo yum install tesseract-devel leptonica-devel tesseract-langpack-pol
 ```
 
-- Usage for image with Polish text:
+Usage for image with Polish text:
 ```sh
 tesseract -l pol image.png output
 ```
-- Tesseract writes output with .txt extension
+Tesseract writes output with .txt extension
