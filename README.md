@@ -45,3 +45,15 @@ wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.5/Ob
 chmod +x Obsidian-*
 sudo mv Obsidian-* /usr/local/bin/Obsidian
 ```
+
+## Image to text
+- Install of Tesseract:
+```sh
+sudo yum install tesseract-devel leptonica-devel tesseract-langpack-pol
+```
+
+- Usage for image with Polish text:
+```sh
+tesseract -l pol image.png output
+```
+- Tesseract writes output witn .txt extension
