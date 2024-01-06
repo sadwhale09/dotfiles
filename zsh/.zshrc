@@ -3,7 +3,11 @@ autoload -U colors && colors
 setopt PROMPT_SUBST     # This allows to print command output in a prompt (git branch ...)
 # PROMPT="%B%F{green}[%n@%m]%F{blue}[%F{reset_color}%~%F{blue}]"$'\n'"%F{yellow}[$(git branch | awk '/*/ {print $2}')]%F{reset_color}$%b "
 # TODO: Add git status indicator
-PROMPT="%B%F{green}[%n@%m]%F{blue}[%F{reset_color}%~%F{blue}]"$'\n'"%F{reset_color}$%b "
+# PROMPT="%B%F{green}[%n@%m]%F{blue}[%F{reset_color}%~%F{blue}]"$'\n'"%F{reset_color}$%b "
+#
+setopt prompt_subst
+PS1='%B%F{green}$(shrink_path -f)|>%F{reset_color} '
+
 # RPROMPT='%t'          # This makes text on the right (a clock for e example)
 
 
@@ -32,3 +36,4 @@ source $HOME/.config/shell/aliasrc
 source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/plugins/colored-man-pages/colored-man-pages.plugin.zsh
+source $HOME/.config/zsh/plugins/shrink-path/shrink-path.plugin.zsh
