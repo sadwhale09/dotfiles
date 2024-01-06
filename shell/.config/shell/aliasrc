@@ -23,6 +23,11 @@ alias dnf='sudo dnf5'
 # zsh
 alias so='source ~/.zshrc'
 
+# Navigate up
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 
 ## STOLEN FROM .oh-my-zsh/plugins/common-aliases/
 
