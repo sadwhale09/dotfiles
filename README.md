@@ -96,15 +96,23 @@ Tesseract writes output with .txt extension
 
 # Fonts:
 
-| fontawesome |
-| jetbrains-mono |
+| Font | Installation |
+|-|-|
+|fontawesome||
+|jetbrains-mono||
 
 
 
 
-| mpv | media player
-| ark | archive manager
-| vlc | media player
+# Less important or gui packages:
+
+
+| Package | Description |
+|-|-|
+| mpv | media player |
+| imv | image viewer |
+| ark | archive manager |
+| vlc | media player |
 
 
 # Dev packages:
