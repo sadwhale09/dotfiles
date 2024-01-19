@@ -1,11 +1,15 @@
 ## MY ALIASES
-alias dnf='dnf5'
+alias dnf='sudo dnf5'
 alias lg='lazygit'
 alias vi='nvim'
 alias vim='nvim'
 
+# Create today's date markdown file
+alias datemd='touch $(date -I).md'
+
 # Copy to system clipboard (Xorg)
 alias xclip='xclip -sel c'
+
 # Wayland alternative to xclip
 alias c='wl-copy'
 alias p='wl-paste'
@@ -13,14 +17,12 @@ alias p='wl-paste'
 # Default to opening files
 alias o='xdg-open'
 
+# Some utils
 alias yt='youtube-dl'
 alias weather='curl https://wttr.in'
 alias cal='cal -3m'
 
-# Faster dnf
-alias dnf='sudo dnf5'
-
-# zsh
+# zsh sourcing
 alias so='source ~/.zshrc'
 
 # Navigate up
