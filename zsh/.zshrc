@@ -37,3 +37,4 @@ source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting
 source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/plugins/colored-man-pages/colored-man-pages.plugin.zsh
 source $HOME/.config/zsh/plugins/shrink-path/shrink-path.plugin.zsh
+source $HOME/.config/zsh/plugins/git-prompt/git-prompt.plugin.zsh
