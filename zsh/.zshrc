@@ -38,3 +38,6 @@ source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.config/zsh/plugins/colored-man-pages/colored-man-pages.plugin.zsh
 source $HOME/.config/zsh/plugins/shrink-path/shrink-path.plugin.zsh
 source $HOME/.config/zsh/plugins/git-prompt/git-prompt.plugin.zsh
+
+# Doom Emacs shit
+export PATH=$PATH:$HOME/.emacs.d/bin
