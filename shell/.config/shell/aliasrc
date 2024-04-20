@@ -4,6 +4,8 @@ alias lg='lazygit'
 alias vi='nvim'
 alias vim='nvim'
 
+alias gnucash='export LANG=pl_PL.UTF-8 && gnucash&; LANG=en_US.UTF-8'
+
 # Create today's date markdown file
 alias datemd='touch $(date -I).md'
 
