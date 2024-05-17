@@ -1,6 +1,8 @@
 #!/bin/bash
 
-set previewer ~/.config/lf/preview
+set preview
+set previewer
+# set previewer ~/.config/lf/preview
 set cleaner ~/.config/lf/cleaner
 set preview true
 set hidden true
