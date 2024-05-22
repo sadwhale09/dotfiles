@@ -83,6 +83,7 @@ window#waybar.hidden {
 #custom-dnd,
 #battery,
 #cpu,
+#temperature,
 #language,
 #memory,
 #network,
@@ -176,6 +177,19 @@ label:focus {
     color: @theme_selected_fg_color;
 }
 
+#temperature {
+    background: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+#temperature.warning {
+    background-color: orange;
+}
+
+#temperature.critical {
+    background-color: red;
+}
+
 #language {
     background: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
@@ -217,7 +231,7 @@ label:focus {
 }
 
 #pulseaudio.muted {
-    background: @theme_bg_color;
+    background: darkred;
     color: @wm_icon_bg;
 }
 
