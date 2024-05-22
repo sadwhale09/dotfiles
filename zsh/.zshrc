@@ -41,3 +41,7 @@ source $HOME/.config/zsh/plugins/git-prompt/git-prompt.plugin.zsh
 
 # Doom Emacs shit
 export PATH=$PATH:$HOME/.emacs.d/bin
+
+
+# Direnv shit
+eval "$(direnv hook zsh)"
