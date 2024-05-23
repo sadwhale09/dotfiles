@@ -2,15 +2,19 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "modules-left": ["custom/menu", "sway/workspaces", "sway/window"],
+    "modules-left": [
+        // "custom/menu", 
+        "sway/workspaces", 
+        "sway/window"
+    ],
     "modules-center": ["custom/wf-recorder", "sway/mode"],
     "modules-right": [
-        "custom/weather",
-        "custom/wlsunset",
-        "custom/playerctl",
-        "custom/help",
+        // "custom/weather",
+        // "custom/wlsunset",
+        // "custom/playerctl",
+        // "custom/help",
         "idle_inhibitor",
-        "custom/dnd",
+        // "custom/dnd",
         "sway/language",
         "custom/clipboard",
         "cpu",
@@ -18,10 +22,10 @@
         "memory",
         "battery",
         "network",
-        "bluetooth",
+        // "bluetooth",
         "pulseaudio",
         "clock",
-        "custom/power",
+        // "custom/power",
         "tray"
     ],
     
@@ -49,11 +53,11 @@
         "signal": 9
     },
 
-    // "custom/menu": {
-    //     "format": "",
-    //     "on-click": "exec nwg-drawer",
-    //     "tooltip": false
-    // },
+    "custom/menu": {
+        "format": "",
+        "on-click": "exec nwg-drawer",
+        "tooltip": false
+    },
     
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>",
