@@ -49,11 +49,11 @@
         "signal": 9
     },
 
-    "custom/menu": {
-        "format": "",
-        "on-click": "exec nwg-drawer",
-        "tooltip": false
-    },
+    // "custom/menu": {
+    //     "format": "",
+    //     "on-click": "exec nwg-drawer",
+    //     "tooltip": false
+    // },
     
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>",
