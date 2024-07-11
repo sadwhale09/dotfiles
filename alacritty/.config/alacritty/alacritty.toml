@@ -1,0 +1,25 @@
+[colors.primary]
+# background = "#1d1f21"
+background = "#000000"
+foreground = "#ffffff"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+# [shell]
+# args = ["new-session", "-A", "-D", "-s", "main"]
+# program = "tmux"
+# program = "zsh"
