@@ -78,7 +78,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
     bindsym $mod+Shift+Return exec $files
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
