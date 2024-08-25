@@ -43,5 +43,11 @@ source $HOME/.config/zsh/plugins/git-prompt/git-prompt.plugin.zsh
 export PATH=$PATH:$HOME/.emacs.d/bin
 
 
+# set PATH so it includes user's private ~/.local/bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+
 # Direnv shit
 eval "$(direnv hook zsh)"
