@@ -71,9 +71,9 @@ alias help='man'
 alias sortnr='sort -n -r'
 alias unexport='unset'
 
-alias rm='rm -i'
+alias rm='rm -I'
 alias cp='cp -i'
-alias mv='mv -i'
+alias mv='mv -I'
 
 # zsh is able to auto-do some kungfoo
 # depends on the SUFFIX :)
