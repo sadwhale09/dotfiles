@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# This is a script to insert datetime 
+# into demon.csv when I hear the sound
+
+FILE="$HOME/life-repo/csv-stats/demon.csv"
+date +%Y-%m-%d\ %H:%M >> "$FILE"

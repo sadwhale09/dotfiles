@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "----------------------------------"
+echo "---- Performing Obsidian Sync ----"
+echo "----------------------------------"
+
+VAULT="$HOME/life-repo/obsidian-vault"
+cd "$VAULT"
+git pull && git add . && git commit -m "Obsidian sync on `hostname`: `date +'%Y-%m-%d %H-%M-%S'`" && git push
