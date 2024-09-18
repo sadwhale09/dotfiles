@@ -27,9 +27,9 @@ set $term_files kitty -e ranger
 # Application launcher
 # set $menu bemenu-run
 set $rofi_cmd rofi -terminal '$term'
-# set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 # This shows with opened windows:
-set $menu $rofi_cmd -show drun
+# set $menu $rofi_cmd -show drun
 
 
 ### NixOS config
