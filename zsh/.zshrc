@@ -49,5 +49,11 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 
+LFCD="$HOME/.config/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
+
+
 # Direnv shit
 eval "$(direnv hook zsh)"
