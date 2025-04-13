@@ -247,5 +247,9 @@ bindsym $mod+r mode "resize"
 #     }
 # }
 
+# Toggle bar
+bindsym $mod+Tab exec killall -SIGUSR1 waybar
+
+
 include /etc/sway/config.d/*
 include config.d/*
