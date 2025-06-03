@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo "######################################"
+echo "#                                    #"
+echo "#  PERFORMING OBSIDIAN-SYNC ON SERV  #"
+echo "#                                    #"
+echo "######################################"
+
+ssh jr@serv "cd share/vault && ./obsidian-sync.sh"
