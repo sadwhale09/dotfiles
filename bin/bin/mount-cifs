@@ -1,0 +1,1 @@
+mkdir ~/smb4k/192.168.1.215/share -p && sudo mount -t cifs -o uid=1000,username=jr //192.168.1.215/share ~/smb4k/192.168.1.215/share

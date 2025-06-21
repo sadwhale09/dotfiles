@@ -1,0 +1,2 @@
+sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 jr@192.168.1.215:/home/jr/server-vault/ ~/remote-vault
+sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 jr@192.168.1.215:/home/jr/server-life-repo/ ~/life-repo
