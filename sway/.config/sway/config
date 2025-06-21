@@ -95,6 +95,10 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
+    # Lock screen
+    bindsym Mod1+Control+l exec swaylock
+
 #
 # Moving around:
 #
