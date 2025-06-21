@@ -27,6 +27,7 @@ set $rofi_cmd rofi \
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+set $emoji rofimoji
 
 ### Output configuration
 #
@@ -82,6 +83,9 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Emoji picker
+    bindsym $mod+Period exec $emoji
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -245,5 +249,6 @@ bindsym $mod+r mode "resize"
 # Note the quoting, the $() and the arguments quoting. All the parts are equally
 # important to make the magic work. And if you want to learn the secret behind
 # the trick, it's all in the `wordexp(3)`.
-#
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/custom/*.conf")'
+
