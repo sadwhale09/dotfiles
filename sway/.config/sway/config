@@ -166,6 +166,10 @@ set $emoji rofimoji
     bindsym $mod+Shift+0 move container to $ws10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+    # Go to neighbouring workspaces
+    bindsym $mod+Control+h workspace prev
+    bindsym $mod+Control+l workspace next
 #
 # Layout stuff:
 #
